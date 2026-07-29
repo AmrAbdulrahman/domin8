@@ -2,7 +2,9 @@
   "name": "@domin8/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:marketing": "nx build marketing"
+  },
   "private": true,
   "dependencies": {
     "next": "~16.1.6",
