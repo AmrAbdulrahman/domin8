@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/marketing"
+    },
+    {
+      "path": "./libs/ui"
+    },
+    {
+      "path": "./libs/data"
+    }
+  ]
+}

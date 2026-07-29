@@ -1,0 +1,26 @@
+<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="320" height="220" fill="none"/>
+  <!-- thread spool -->
+  <circle cx="228" cy="46" r="24" fill="#eaf1ff" stroke="#2957c9" stroke-width="6"/>
+  <line x1="228" y1="46" x2="228" y2="46" stroke="#2957c9" stroke-width="6"/>
+  <circle cx="228" cy="46" r="8" fill="#2957c9"/>
+  <line x1="228" y1="70" x2="205" y2="96" stroke="#2957c9" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- main body -->
+  <rect x="62" y="80" width="180" height="58" rx="26" fill="#eaf1ff" stroke="#2957c9" stroke-width="6"/>
+
+  <!-- grip -->
+  <path d="M104 136 C 96 158, 100 176, 118 190" stroke="#2957c9" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <!-- neck -->
+  <rect x="150" y="136" width="20" height="52" rx="9" fill="#eaf1ff" stroke="#2957c9" stroke-width="6"/>
+
+  <!-- needle -->
+  <line x1="160" y1="188" x2="160" y2="208" stroke="#2957c9" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- power button -->
+  <circle cx="204" cy="109" r="7" fill="#2957c9"/>
+
+  <!-- fabric line -->
+  <line x1="40" y1="208" x2="280" y2="208" stroke="#9aa5b1" stroke-width="4" stroke-dasharray="2 8" stroke-linecap="round"/>
+</svg>

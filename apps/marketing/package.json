@@ -1,0 +1,13 @@
+{
+  "name": "@domin8/marketing",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@domin8/data": "*",
+    "@domin8/ui": "*",
+    "@fontsource/inter": "^5.3.0",
+    "next": "~16.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
