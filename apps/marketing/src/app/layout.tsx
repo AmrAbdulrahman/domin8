@@ -10,6 +10,13 @@ export const metadata = {
   title: 'Domin8 — Handheld Sewing Machines & Sewing Innovation',
   description:
     'Domin8 is an Amazon ecommerce brand designing practical, portable sewing tools — starting with our cordless handheld sewing machine.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
