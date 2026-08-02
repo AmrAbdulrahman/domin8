@@ -6,3 +6,6 @@ export * from './lib/SectionHeading';
 export * from './lib/Header';
 export * from './lib/Footer';
 export * from './lib/ProductCard';
+export * from './lib/ProductGallery';
+export * from './lib/RatingStars';
+export * from './lib/TeamMemberCard';

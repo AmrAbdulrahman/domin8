@@ -1,10 +1,11 @@
 // Core company facts used across the marketing site.
 //
-// NOTE: registrationNumber, registeredAgent, and the two operating
-// addresses below are placeholders. We could not locate a verified
-// Wyoming filing number or confirmed correspondence addresses in
-// the connected Notion workspace, so replace these with the real,
-// verified details before this site goes live.
+// Wyoming entity details (legal name, filing number, registered agent,
+// principal office address) are verified against the Wyoming Secretary
+// of State Certificate of Organization filed 2025-10-08.
+//
+// NOTE: the UK correspondence address below is still a placeholder —
+// add the real UK address before this site goes live.
 
 export interface Address {
   label: string;
@@ -18,6 +19,7 @@ export interface CompanyInfo {
   formationState: string;
   formationCountry: string;
   registrationNumber: string;
+  formationDate: string;
   operatesFrom: string;
   foundedYear: number;
   teamSize: number;
@@ -39,20 +41,24 @@ export interface CompanyInfo {
 }
 
 export const company: CompanyInfo = {
-  legalName: 'Domin8 LLC',
+  legalName: 'Domin8 Holdings LLC',
   brandName: 'Domin8',
   entityType: 'Limited Liability Company (LLC)',
   formationState: 'Wyoming',
   formationCountry: 'United States',
-  // Placeholder — confirm against the Wyoming Secretary of State filing.
-  registrationNumber: '[Wyoming SOS filing number — add here]',
+  registrationNumber: '2025-001786051',
+  formationDate: 'October 8, 2025',
   operatesFrom: 'United Kingdom',
   foundedYear: 2025,
   teamSize: 3,
   addresses: [
     {
       label: 'Registered agent (Wyoming, USA)',
-      lines: ['[Registered agent name]', '[Street address]', '[City, WY ZIP]', 'United States'],
+      lines: ['Registered Agents Inc', '30 N Gould St Ste R', 'Sheridan, WY 82801', 'United States'],
+    },
+    {
+      label: 'Principal office address',
+      lines: ['30 N Gould St Ste R', 'Sheridan, WY 82801', 'United States'],
     },
     {
       label: 'UK correspondence address',

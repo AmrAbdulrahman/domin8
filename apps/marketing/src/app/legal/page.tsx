@@ -43,15 +43,15 @@ export default function LegalPage() {
                 <td>{company.registrationNumber}</td>
               </tr>
               <tr>
+                <td>Date of formation</td>
+                <td>{company.formationDate}</td>
+              </tr>
+              <tr>
                 <td>Operating from</td>
                 <td>{company.operatesFrom}</td>
               </tr>
             </tbody>
           </table>
-          <p className="d8-legal-note">
-            Placeholder — the exact Wyoming filing number should be confirmed against the Wyoming
-            Secretary of State record and inserted here before publishing.
-          </p>
         </div>
 
         <div className="d8-legal-block">
@@ -71,8 +71,8 @@ export default function LegalPage() {
             </div>
           ))}
           <p className="d8-legal-note">
-            Placeholder — confirm and insert the registered agent&apos;s address (Wyoming) and the
-            UK correspondence address before publishing.
+            The UK correspondence address above is a placeholder — add the confirmed address
+            before publishing.
           </p>
         </div>
 

@@ -580,6 +580,26 @@ img, svg {
   flex: 1;
 }
 
+.d8-product-card__brand {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--d8-fg-muted);
+  border: 1px solid var(--d8-border);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  text-decoration: none;
+  margin-bottom: -0.3rem;
+}
+
+.d8-product-card__brand:hover {
+  color: var(--d8-blue-light);
+  border-color: var(--d8-blue-light);
+}
+
 .d8-product-card__name {
   font-size: 1.2rem;
   font-weight: 500;
@@ -671,6 +691,58 @@ img, svg {
   color: var(--d8-blue-light);
   font-weight: 500;
   font-size: 0.92rem;
+}
+
+/* Team */
+.d8-team-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .d8-team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.d8-team-card {
+  text-align: center;
+}
+
+.d8-team-card__photo-wrap {
+  border-radius: var(--d8-radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--d8-bg-elevated);
+  margin-bottom: 1.25rem;
+}
+
+.d8-team-card__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.d8-team-card__name {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.d8-team-card__role {
+  color: var(--d8-fg-muted);
+  font-size: 0.92rem;
+  margin-top: 0.2rem;
+}
+
+.d8-team-card__linkedin {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: var(--d8-blue-light);
+  font-weight: 500;
+  font-size: 0.88rem;
 }
 
 /* Legal */
@@ -787,4 +859,264 @@ img, svg {
   padding-top: 0.6rem;
   font-size: 0.8rem;
   color: var(--d8-fg-muted);
+}
+
+/* Product detail page */
+.d8-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--d8-fg-muted);
+  padding: 2rem 0 1.5rem;
+}
+
+.d8-breadcrumb a:hover {
+  color: var(--d8-blue-light);
+}
+
+.d8-product-detail__layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 860px) {
+  .d8-product-detail__layout {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: start;
+  }
+}
+
+.d8-product-detail__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.d8-product-detail__name {
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.d8-product-detail__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.d8-product-detail__rating-value {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.d8-product-detail__rating-count {
+  font-size: 0.85rem;
+  color: var(--d8-fg-muted);
+  text-decoration: underline;
+}
+
+.d8-product-detail__rating-count:hover {
+  color: var(--d8-blue-light);
+}
+
+.d8-product-detail__price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+.d8-product-detail__heading {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.d8-product-detail__paragraph {
+  color: var(--d8-fg-muted);
+  font-size: 0.98rem;
+  margin-bottom: 0.9rem;
+  max-width: 72ch;
+}
+
+/* Gallery */
+.d8-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.d8-gallery__main {
+  border: 1px solid var(--d8-border);
+  border-radius: var(--d8-radius-lg);
+  background: var(--d8-bg-elevated);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d8-gallery__main--empty {
+  color: var(--d8-fg-muted);
+  font-size: 0.95rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.d8-gallery__main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.d8-gallery__thumbs {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.d8-gallery__thumb {
+  width: 68px;
+  height: 68px;
+  border-radius: var(--d8-radius-sm);
+  border: 1px solid var(--d8-border);
+  background: var(--d8-bg-elevated);
+  overflow: hidden;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+
+.d8-gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.d8-gallery__thumb:hover {
+  opacity: 1;
+}
+
+.d8-gallery__thumb--active {
+  opacity: 1;
+  border-color: var(--d8-blue-light);
+}
+
+/* Ratings */
+.d8-rating {
+  display: inline-flex;
+  gap: 0.15rem;
+  color: var(--d8-border);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.d8-rating--sm {
+  font-size: 0.85rem;
+}
+
+.d8-rating__star--filled {
+  color: var(--d8-concept);
+}
+
+/* Spec table */
+.d8-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.d8-spec-table tr {
+  border-bottom: 1px solid var(--d8-border);
+}
+
+.d8-spec-table tr:last-child {
+  border-bottom: none;
+}
+
+.d8-spec-table th,
+.d8-spec-table td {
+  text-align: left;
+  padding: 0.75rem 0;
+  vertical-align: top;
+}
+
+.d8-spec-table th {
+  width: 220px;
+  font-weight: 500;
+  color: var(--d8-fg-muted);
+  padding-right: 1.5rem;
+}
+
+/* Reviews */
+.d8-reviews-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.d8-reviews-summary__value {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.d8-reviews-summary__count {
+  font-size: 0.85rem;
+  color: var(--d8-fg-muted);
+  margin-top: 0.35rem;
+}
+
+.d8-review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.d8-review {
+  border-bottom: 1px solid var(--d8-border);
+  padding-bottom: 1.5rem;
+}
+
+.d8-review:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.d8-review__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.d8-review__verified {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--d8-blue-light);
+  letter-spacing: 0.03em;
+}
+
+.d8-review__title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.d8-review__body {
+  color: var(--d8-fg-muted);
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+  max-width: 72ch;
+}
+
+.d8-review__meta {
+  font-size: 0.8rem;
+  color: var(--d8-silver);
 }

@@ -28,6 +28,9 @@ export function Footer({ company }: { company: CompanyInfo }) {
 
         <div className="d8-footer__col">
           <p className="d8-footer__heading">Company</p>
+          <Link href="/team" className="d8-footer__link">
+            Team
+          </Link>
           <Link href="/contact" className="d8-footer__link">
             Contact
           </Link>

@@ -72,7 +72,7 @@ export default function HomePage() {
                 <p className="d8-product-card__tagline">{highlighted.tagline}</p>
                 <p className="d8-product-card__description">{highlighted.description}</p>
                 <div className="d8-product-card__footer">
-                  <Button href="/products#next-gen-design" variant="primary">
+                  <Button href={`/products/${highlighted.id}`} variant="primary">
                     Explore the design
                   </Button>
                   <Button href="/contact" variant="secondary">
