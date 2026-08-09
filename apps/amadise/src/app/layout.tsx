@@ -17,18 +17,21 @@ export const metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
+  openGraph: {
+    images: ['/logo-full.png'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Header shopHref="/products" brandName="amadise" logoSrc="/logo.svg" />
+        <Header shopHref="/products" brandName="amadise" logoSrc="/logo.png" />
         <main>{children}</main>
         <Footer
           company={amadiseCompany}
           brandName="amadise"
-          logoSrc="/logo.svg"
+          logoSrc="/logo.png"
           showUpcomingLink={false}
           tagline={
             <>

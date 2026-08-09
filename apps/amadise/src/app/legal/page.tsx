@@ -11,6 +11,8 @@ export default function LegalPage() {
   return (
     <Container>
       <section className="d8-page-section">
+        <img src="/logo-full.png" alt="Amadise — Home. Comfort. Amadise." className="a8-legal-logo" />
+
         <SectionHeading
           eyebrow="Legal"
           title="Amadise & Domin8"

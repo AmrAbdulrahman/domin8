@@ -81,9 +81,8 @@ export function Footer({
 
       <div className="d8-container">
         <p className="d8-footer__facts">
-          {company.teamSize}-person team &nbsp;&middot;&nbsp; Incorporated in{' '}
-          {company.formationState}, {company.formationCountry} &nbsp;&middot;&nbsp; Operating from{' '}
-          {company.operatesFrom} &nbsp;&middot;&nbsp; Est. {company.foundedYear}
+          Incorporated in {company.formationState}, {company.formationCountry} &nbsp;&middot;&nbsp;
+          Operating from {company.operatesFrom} &nbsp;&middot;&nbsp; Est. {company.foundedYear}
         </p>
         <p className="d8-footer__legal">
           &copy; {year} {company.legalName}. All rights reserved.

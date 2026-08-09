@@ -1139,3 +1139,10 @@ img, svg {
   color: var(--d8-fg);
   font-weight: 600;
 }
+
+.a8-legal-logo {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin-bottom: 2rem;
+}
