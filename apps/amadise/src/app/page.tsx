@@ -43,29 +43,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="d8-stats-strip">
-        <Container>
-          <div className="d8-hero__stat-grid">
-            <div>
-              <p className="d8-hero__stat-value">Domin8</p>
-              <p className="d8-hero__stat-label">Parent brand</p>
-            </div>
-            <div>
-              <p className="d8-hero__stat-value">{amadiseTrademark.number}</p>
-              <p className="d8-hero__stat-label">Registered trademark (UK)</p>
-            </div>
-            <div>
-              <p className="d8-hero__stat-value">{amadiseCompany.foundedYear}</p>
-              <p className="d8-hero__stat-label">Founded</p>
-            </div>
-            <div>
-              <p className="d8-hero__stat-value">{amadiseCompany.teamSize}-person</p>
-              <p className="d8-hero__stat-label">Team</p>
-            </div>
-          </div>
-        </Container>
-      </section>
-
       <section className="d8-page-section">
         <Container>
           <SectionHeading
