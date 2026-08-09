@@ -1,18 +1,37 @@
+import { ReactNode } from 'react';
 import Link from 'next/link';
 import type { CompanyInfo } from '@domin8/data';
 import { Wordmark } from './Wordmark';
 
-export function Footer({ company }: { company: CompanyInfo }) {
+export function Footer({
+  company,
+  brandName,
+  logoSrc,
+  tagline,
+  legalNote,
+  showUpcomingLink = true,
+}: {
+  company: CompanyInfo;
+  brandName?: string;
+  logoSrc?: string;
+  tagline?: ReactNode;
+  legalNote?: ReactNode;
+  showUpcomingLink?: boolean;
+}) {
   const year = new Date().getFullYear();
 
   return (
     <footer className="d8-footer">
       <div className="d8-container d8-footer__inner">
         <div className="d8-footer__brand">
-          <Wordmark />
+          <Wordmark brandName={brandName} logoSrc={logoSrc} />
           <p className="d8-footer__tagline">
-            {company.brandName} is an independent ecommerce brand designing practical, portable
-            sewing tools.
+            {tagline ?? (
+              <>
+                {company.brandName} is an independent ecommerce brand designing practical,
+                portable sewing tools.
+              </>
+            )}
           </p>
         </div>
 
@@ -21,9 +40,11 @@ export function Footer({ company }: { company: CompanyInfo }) {
           <Link href="/products" className="d8-footer__link">
             Products
           </Link>
-          <Link href="/products#next-gen-design" className="d8-footer__link">
-            Upcoming design
-          </Link>
+          {showUpcomingLink && (
+            <Link href="/products#next-gen-design" className="d8-footer__link">
+              Upcoming design
+            </Link>
+          )}
         </div>
 
         <div className="d8-footer__col">
@@ -67,6 +88,7 @@ export function Footer({ company }: { company: CompanyInfo }) {
         <p className="d8-footer__legal">
           &copy; {year} {company.legalName}. All rights reserved.
         </p>
+        {legalNote && <p className="d8-footer__legal">{legalNote}</p>}
       </div>
     </footer>
   );

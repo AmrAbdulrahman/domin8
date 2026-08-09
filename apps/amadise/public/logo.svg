@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220" fill="none">
+  <!-- Olive branch -->
+  <g fill="#5f7a45">
+    <path d="M22 208 C 34 150 46 110 96 66" stroke="#5f7a45" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <g transform="translate(30,196) rotate(-38)">
+      <path d="M0,0 C -11,-7 -11,-21 0,-30 C 11,-21 11,-7 0,0 Z"/>
+    </g>
+    <g transform="translate(42,172) rotate(18)">
+      <path d="M0,0 C -12,-8 -12,-23 0,-33 C 12,-23 12,-8 0,0 Z"/>
+    </g>
+    <g transform="translate(50,146) rotate(-42)">
+      <path d="M0,0 C -12,-8 -12,-24 0,-34 C 12,-24 12,-8 0,0 Z"/>
+    </g>
+    <g transform="translate(62,120) rotate(20)">
+      <path d="M0,0 C -11,-8 -11,-23 0,-33 C 11,-23 11,-8 0,0 Z"/>
+    </g>
+    <g transform="translate(72,96) rotate(-40)">
+      <path d="M0,0 C -10,-7 -10,-20 0,-29 C 10,-20 10,-7 0,0 Z"/>
+    </g>
+    <g transform="translate(88,74) rotate(10)">
+      <path d="M0,0 C -9,-6 -9,-18 0,-26 C 9,-18 9,-6 0,0 Z"/>
+    </g>
+    <g transform="translate(97,58) rotate(-18)">
+      <path d="M0,0 C -8,-14 -6,-32 2,-44 C 9,-31 8,-13 0,0 Z"/>
+    </g>
+  </g>
+
+  <!-- House -->
+  <g stroke="#2b2a27" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M95 88 L160 18 L225 88" />
+    <path d="M95 88 L95 176" />
+    <path d="M225 88 L225 176" />
+    <path d="M95 176 L225 176" />
+  </g>
+
+  <!-- Window -->
+  <g fill="#c9a05e">
+    <rect x="131" y="102" width="26" height="26" rx="5" />
+    <rect x="163" y="102" width="26" height="26" rx="5" />
+    <rect x="131" y="134" width="26" height="26" rx="5" />
+    <rect x="163" y="134" width="26" height="26" rx="5" />
+  </g>
+</svg>

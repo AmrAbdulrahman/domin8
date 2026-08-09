@@ -9,14 +9,24 @@ const NAV_LINKS = [
   { href: '/legal', label: 'Legal' },
 ];
 
-export function Header({ shopHref = '/products' }: { shopHref?: string }) {
+export function Header({
+  shopHref = '/products',
+  brandName,
+  logoSrc,
+  navLinks = NAV_LINKS,
+}: {
+  shopHref?: string;
+  brandName?: string;
+  logoSrc?: string;
+  navLinks?: { href: string; label: string }[];
+}) {
   return (
     <header className="d8-header">
       <div className="d8-container d8-header__inner">
-        <Wordmark />
+        <Wordmark brandName={brandName} logoSrc={logoSrc} />
 
         <nav className="d8-header__nav d8-header__nav--desktop" aria-label="Primary">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="d8-header__link">
               {link.label}
             </Link>
@@ -32,7 +42,7 @@ export function Header({ shopHref = '/products' }: { shopHref?: string }) {
         <details className="d8-header__mobile">
           <summary aria-label="Open menu">Menu</summary>
           <nav className="d8-header__nav d8-header__nav--mobile" aria-label="Primary mobile">
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className="d8-header__link">
                 {link.label}
               </Link>

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build:marketing": "nx build marketing"
+    "build:marketing": "nx build marketing",
+    "build:amadise": "nx build amadise"
   },
   "private": true,
   "dependencies": {
