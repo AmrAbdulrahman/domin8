@@ -26,12 +26,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <Header shopHref="/products" brandName="amadise" logoSrc="/logo.png" />
+        <Header shopHref="/products" brandName="amadise" combinedSrc="/logo-banner.svg" />
         <main>{children}</main>
         <Footer
           company={amadiseCompany}
           brandName="amadise"
-          logoSrc="/logo.png"
+          combinedSrc="/logo-banner.svg"
           showUpcomingLink={false}
           tagline={
             <>

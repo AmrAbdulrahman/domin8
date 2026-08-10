@@ -106,6 +106,17 @@ img, svg {
   height: 2.6rem;
 }
 
+.d8-wordmark__combined {
+  display: block;
+  height: 2.8rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.d8-wordmark--lg .d8-wordmark__combined {
+  height: 3.4rem;
+}
+
 .d8-wordmark--lg .d8-wordmark__text {
   font-size: 1.4rem;
 }

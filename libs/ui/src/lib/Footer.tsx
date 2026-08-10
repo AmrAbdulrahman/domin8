@@ -7,6 +7,7 @@ export function Footer({
   company,
   brandName,
   logoSrc,
+  combinedSrc,
   tagline,
   legalNote,
   showUpcomingLink = true,
@@ -14,6 +15,7 @@ export function Footer({
   company: CompanyInfo;
   brandName?: string;
   logoSrc?: string;
+  combinedSrc?: string;
   tagline?: ReactNode;
   legalNote?: ReactNode;
   showUpcomingLink?: boolean;
@@ -24,7 +26,7 @@ export function Footer({
     <footer className="d8-footer">
       <div className="d8-container d8-footer__inner">
         <div className="d8-footer__brand">
-          <Wordmark brandName={brandName} logoSrc={logoSrc} />
+          <Wordmark brandName={brandName} logoSrc={logoSrc} combinedSrc={combinedSrc} />
           <p className="d8-footer__tagline">
             {tagline ?? (
               <>

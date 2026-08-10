@@ -13,17 +13,19 @@ export function Header({
   shopHref = '/products',
   brandName,
   logoSrc,
+  combinedSrc,
   navLinks = NAV_LINKS,
 }: {
   shopHref?: string;
   brandName?: string;
   logoSrc?: string;
+  combinedSrc?: string;
   navLinks?: { href: string; label: string }[];
 }) {
   return (
     <header className="d8-header">
       <div className="d8-container d8-header__inner">
-        <Wordmark brandName={brandName} logoSrc={logoSrc} />
+        <Wordmark brandName={brandName} logoSrc={logoSrc} combinedSrc={combinedSrc} />
 
         <nav className="d8-header__nav d8-header__nav--desktop" aria-label="Primary">
           {navLinks.map((link) => (
