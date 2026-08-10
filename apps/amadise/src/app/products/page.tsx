@@ -1,5 +1,5 @@
 import { Container, SectionHeading, ProductCard } from '@domin8/ui';
-import { products } from '@domin8/data';
+import { sellableProducts } from '../../lib/products';
 
 export const metadata = {
   title: 'Products — Amadise',
@@ -8,8 +8,6 @@ export const metadata = {
 };
 
 export default function ProductsPage() {
-  const available = products.filter((p) => p.status !== 'concept');
-
   return (
     <Container>
       <section className="d8-page-section">
@@ -20,7 +18,7 @@ export default function ProductsPage() {
         />
 
         <div className="d8-product-grid">
-          {available.map((product) => (
+          {sellableProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

@@ -1132,25 +1132,6 @@ img, svg {
   color: var(--d8-silver);
 }
 
-/* Amadise brand strip */
-.a8-brand-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem 1rem;
-  border: 1px solid var(--d8-border);
-  background: var(--d8-bg-elevated);
-  border-radius: var(--d8-radius-md);
-  padding: 1rem 1.25rem;
-  font-size: 0.88rem;
-  color: var(--d8-fg-muted);
-}
-
-.a8-brand-strip strong {
-  color: var(--d8-fg);
-  font-weight: 600;
-}
-
 .a8-legal-logo {
   width: 100%;
   max-width: 360px;

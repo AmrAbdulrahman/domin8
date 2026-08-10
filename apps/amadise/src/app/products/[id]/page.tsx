@@ -1,19 +1,15 @@
 import { notFound } from 'next/navigation';
 import { Container, Badge, Button, ProductGallery, RatingStars } from '@domin8/ui';
-import { products, getProductById, getAverageRating } from '@domin8/data';
-
-const sellable = (id: string) => {
-  const product = getProductById(id);
-  return product && product.status !== 'concept' ? product : undefined;
-};
+import { getAverageRating } from '@domin8/data';
+import { sellableProducts, getSellableProduct } from '../../../lib/products';
 
 export function generateStaticParams() {
-  return products.filter((p) => p.status !== 'concept').map((product) => ({ id: product.id }));
+  return sellableProducts.map((product) => ({ id: product.id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const product = sellable(id);
+  const product = getSellableProduct(id);
 
   if (!product) {
     return { title: 'Product not found — Amadise' };
@@ -31,7 +27,7 @@ export default async function ProductDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const product = sellable(id);
+  const product = getSellableProduct(id);
 
   if (!product) {
     notFound();

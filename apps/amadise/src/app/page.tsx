@@ -1,10 +1,7 @@
 import { Container, SectionHeading, ProductCard, Button } from '@domin8/ui';
-import { products } from '@domin8/data';
-import { amadiseTrademark, amadiseCompany } from '../lib/brand';
+import { sellableProducts } from '../lib/products';
 
 export default function HomePage() {
-  const featured = products.filter((p) => p.status !== 'concept');
-
   return (
     <>
       <section className="d8-hero-video">
@@ -51,31 +48,9 @@ export default function HomePage() {
             description="The same Domin8 products, presented for the home: quick repairs, tidy storage, and the small tools that make everyday comfort easier."
           />
           <div className="d8-product-grid">
-            {featured.map((product) => (
+            {sellableProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="d8-page-section d8-page-section--alt">
-        <Container>
-          <SectionHeading
-            eyebrow="Part of Domin8"
-            title="Amadise is a Domin8 brand"
-            description="Amadise is part of and belongs to Domin8 — the same team, the same products, presented as a dedicated home & comfort brand."
-          />
-          <div className="a8-brand-strip">
-            <span>
-              <strong>Amadise</strong> is a brand under the Domin8 umbrella.
-            </span>
-            <span>
-              Owned by <strong>{amadiseCompany.legalName}</strong>.
-            </span>
-            <span>
-              Trademarked in the <strong>{amadiseTrademark.jurisdiction}</strong>, no.{' '}
-              <strong>{amadiseTrademark.number}</strong>.
-            </span>
           </div>
         </Container>
       </section>
