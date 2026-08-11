@@ -11,12 +11,16 @@ const NAV_LINKS = [
 
 export function Header({
   shopHref = '/products',
+  ctaLabel = 'Shop now',
+  ctaExternal = false,
   brandName,
   logoSrc,
   combinedSrc,
   navLinks = NAV_LINKS,
 }: {
   shopHref?: string;
+  ctaLabel?: string;
+  ctaExternal?: boolean;
   brandName?: string;
   logoSrc?: string;
   combinedSrc?: string;
@@ -36,8 +40,8 @@ export function Header({
         </nav>
 
         <div className="d8-header__cta">
-          <Button href={shopHref} variant="primary">
-            Shop now
+          <Button href={shopHref} variant="primary" external={ctaExternal}>
+            {ctaLabel}
           </Button>
         </div>
 

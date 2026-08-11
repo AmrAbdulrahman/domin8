@@ -23,9 +23,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <Header shopHref="/products" />
+        <Header
+          shopHref="https://amadise.com"
+          ctaLabel="Visit Amadise"
+          ctaExternal
+          navLinks={[
+            { href: '/', label: 'Home' },
+            { href: '/#brands', label: 'Brands' },
+            { href: '/contact', label: 'Contact' },
+            { href: '/legal', label: 'Legal' },
+          ]}
+        />
         <main>{children}</main>
-        <Footer company={company} />
+        <Footer
+          company={company}
+          shopHeading="Brands"
+          shopLinks={[{ label: 'Amadise', href: 'https://amadise.com' }]}
+        />
       </body>
     </html>
   );

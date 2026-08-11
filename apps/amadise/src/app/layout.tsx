@@ -32,7 +32,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           company={amadiseCompany}
           brandName="amadise"
           combinedSrc="/logo-banner.svg"
-          showUpcomingLink={false}
           tagline={
             <>
               Amadise is a home &amp; comfort brand under the Domin8 umbrella, sharing Domin8’s

@@ -10,7 +10,8 @@ export function Footer({
   combinedSrc,
   tagline,
   legalNote,
-  showUpcomingLink = true,
+  shopHeading = 'Shop',
+  shopLinks = [{ label: 'Products', href: '/products' }],
 }: {
   company: CompanyInfo;
   brandName?: string;
@@ -18,7 +19,8 @@ export function Footer({
   combinedSrc?: string;
   tagline?: ReactNode;
   legalNote?: ReactNode;
-  showUpcomingLink?: boolean;
+  shopHeading?: string;
+  shopLinks?: { label: string; href: string }[];
 }) {
   const year = new Date().getFullYear();
 
@@ -37,17 +39,28 @@ export function Footer({
           </p>
         </div>
 
-        <div className="d8-footer__col">
-          <p className="d8-footer__heading">Shop</p>
-          <Link href="/products" className="d8-footer__link">
-            Products
-          </Link>
-          {showUpcomingLink && (
-            <Link href="/products#next-gen-design" className="d8-footer__link">
-              Upcoming design
-            </Link>
-          )}
-        </div>
+        {shopLinks.length > 0 && (
+          <div className="d8-footer__col">
+            <p className="d8-footer__heading">{shopHeading}</p>
+            {shopLinks.map((link) =>
+              link.href.startsWith('http') ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="d8-footer__link"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link key={link.href} href={link.href} className="d8-footer__link">
+                  {link.label}
+                </Link>
+              )
+            )}
+          </div>
+        )}
 
         <div className="d8-footer__col">
           <p className="d8-footer__heading">Company</p>
@@ -81,11 +94,7 @@ export function Footer({
         </div>
       </div>
 
-      <div className="d8-container">
-        <p className="d8-footer__facts">
-          Incorporated in {company.formationState}, {company.formationCountry} &nbsp;&middot;&nbsp;
-          Operating from {company.operatesFrom} &nbsp;&middot;&nbsp; Est. {company.foundedYear}
-        </p>
+      <div className="d8-container d8-footer__bottom">
         <p className="d8-footer__legal">
           &copy; {year} {company.legalName}. All rights reserved.
         </p>

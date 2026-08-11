@@ -859,17 +859,19 @@ img, svg {
   color: var(--d8-blue-light);
 }
 
-.d8-footer__facts {
+.d8-footer__bottom {
   border-top: 1px solid var(--d8-border);
   padding-top: 1.5rem;
-  font-size: 0.78rem;
-  color: var(--d8-fg-muted);
 }
 
 .d8-footer__legal {
   padding-top: 0.6rem;
   font-size: 0.8rem;
   color: var(--d8-fg-muted);
+}
+
+.d8-footer__legal:first-child {
+  padding-top: 0;
 }
 
 /* Product detail page */
