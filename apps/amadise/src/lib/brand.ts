@@ -8,6 +8,15 @@ import type { CompanyInfo } from '@domin8/data';
 export const amadiseCompany: CompanyInfo = {
   ...domin8Company,
   brandName: 'Amadise',
+  contact: {
+    generalEmail: 'contact@amadise.com',
+    supportEmail: 'contact@amadise.com',
+    pressEmail: 'contact@amadise.com',
+  },
+  socials: [
+    { label: 'Instagram', href: 'https://www.instagram.com/amadiseofficial/' },
+    { label: 'Facebook', href: 'https://www.facebook.com/amadiseofficial' },
+  ],
 };
 
 export const amadiseTrademark = {
