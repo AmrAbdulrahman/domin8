@@ -34,14 +34,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           combinedSrc="/logo-banner.svg"
           tagline={
             <>
-              Amadise is a home &amp; comfort brand under the Domin8 umbrella, sharing Domin8’s
-              handheld sewing machine and accessories.
+              Amadise is a home &amp; comfort brand under the{' '}
+              <a
+                href="https://domin8holdings.com"
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: 'underline' }}
+              >
+                Domin8
+              </a>{' '}
+              umbrella, sharing Domin8’s handheld sewing machine and accessories.
             </>
           }
           legalNote={
             <>
-              Amadise is part of and belongs to {amadiseCompany.legalName} (trading as Domin8).
-              Amadise® is a registered trademark, {amadiseTrademark.jurisdiction} no.{' '}
+              Amadise is part of and belongs to {amadiseCompany.legalName} (trading as{' '}
+              <a
+                href="https://domin8holdings.com"
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: 'underline' }}
+              >
+                Domin8
+              </a>
+              ). Amadise® is a registered trademark, {amadiseTrademark.jurisdiction} no.{' '}
               {amadiseTrademark.number}.
             </>
           }

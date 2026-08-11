@@ -66,9 +66,9 @@ export const company: CompanyInfo = {
     },
   ],
   contact: {
-    generalEmail: 'hello@domin8supply.com',
-    supportEmail: 'support@domin8supply.com',
-    pressEmail: 'press@domin8supply.com',
+    generalEmail: 'contact@amadise.com',
+    supportEmail: 'contact@amadise.com',
+    pressEmail: 'contact@amadise.com',
   },
   socials: [
     { label: 'Instagram', href: 'https://instagram.com/domin8supply' },
